@@ -36,16 +36,25 @@ freqItems, suppData = alg.apriori()
 4. Generate rules
 
 ```python
-assocRules = AssociationRules(freqItems, suppData, minConfidence=0.7)
+assocRules = AssociationRules(freqItems, suppData, minConfidence=0.5)
 ruleList = assocRules.generateRules()
 assocRules.printRules(ruleList)
 
 Output: 
->>> Rule: [2] ==> [5] [0.75,1.0]
->>> Rule: [5] ==> [2] [0.75,1.0]
->>> Rule: [3] ==> [1] [0.5,1.0]
->>> Rule: [2] ==> [3, 5] [0.5,1.0]
->>> Rule: [5] ==> [2, 3] [0.5,1.0]
+>>> Rule: [3] ==> [5] [0.5, 0.6666666666666666]
+>>> Rule: [5] ==> [3] [0.5, 0.6666666666666666]
+>>> Rule: [2] ==> [5] [0.75, 1.0]
+>>> Rule: [5] ==> [2] [0.75, 1.0]
+>>> Rule: [2] ==> [3] [0.5, 0.6666666666666666]
+>>> Rule: [3] ==> [2] [0.5, 0.6666666666666666]
+>>> Rule: [1] ==> [3] [0.5, 0.6666666666666666]
+>>> Rule: [3] ==> [1] [0.5, 1.0]
+>>> Rule: [2] ==> [3, 5] [0.5, 1.0]
+>>> Rule: [3] ==> [2, 5] [0.5, 0.6666666666666666]
+>>> Rule: [5] ==> [2, 3] [0.5, 1.0]
+>>> Rule: [2, 3] ==> [5] [0.5, 0.6666666666666666]
+>>> Rule: [2, 5] ==> [3] [0.5, 0.6666666666666666]
+>>> Rule: [3, 5] ==> [2] [0.5, 0.6666666666666666]
 ```
 
 # Reference

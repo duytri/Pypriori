@@ -8,7 +8,7 @@ class Rule(object):
         self.conf = conf
 
     def __repr__(self):
-        return '{}: {} ==> {} [{},{}]'.format(
+        return '{}: {} ==> {} [{}, {}]'.format(
             type(self).__name__, self.antecedent,
             self.consequent, self.supp, self.conf
         )
