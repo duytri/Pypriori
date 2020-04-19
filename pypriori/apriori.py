@@ -90,7 +90,7 @@ class AssociationRules(object):
 	                lhsList = list(map(frozenset, combinations(item, j)))
 	                for lhs in lhsList:
 		                rhs = item.difference(lhs)
-		                conf = self.supportData[item]/self.supportData[rhs]
+		                conf = self.supportData[item]/self.supportData[lhs]
 		                if conf >= self.minConf:
 		                    bigRuleList.append(Rule(list(lhs),list(rhs), self.supportData[item], conf))
 	    return bigRuleList
