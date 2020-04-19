@@ -91,7 +91,7 @@ class AssociationRules(object):
 	                for lhs in lhsList:
 		                rhs = item.difference(lhs)
 		                conf = self.supportData[item]/self.supportData[rhs]
-		                if conf > self.minConf:
+		                if conf >= self.minConf:
 		                    bigRuleList.append(Rule(list(lhs),list(rhs), self.supportData[item], conf))
 	    return bigRuleList
 
