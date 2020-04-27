@@ -4,9 +4,8 @@ from itertools import combinations
 from . import Rule
 
 class APRIORI(object):
-	def __init__(self, dataSet, minSupport):
+	def __init__(self, dataSet):
 		self.dataSet = dataSet
-		self.minSupport = minSupport
 
 
 
@@ -61,7 +60,8 @@ class APRIORI(object):
 	    return resList
 
 
-	def apriori(self):
+	def apriori(self, minSupport):
+		self.minSupport = minSupport
 	    C1 = self.createC1()
 	    D = list(map(set, self.dataSet))
 	    L1, supportData = self.scanD(D, C1)

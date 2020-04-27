@@ -24,13 +24,13 @@ data = [[1, 3, 4], [2, 3, 5], [1, 2, 3, 5], [2, 5]]
 2. Initialize Apriori class
 
 ```python
-alg = APRIORI(data, minSupport=0.5)
+alg = APRIORI(data)
 ```
 
 3. Discover frequent pattern
 
 ```python
-freqItems, suppData = alg.apriori()
+freqItems, suppData = alg.apriori(minSupport=0.5)
 ```
 
 4. Generate rules
